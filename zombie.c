@@ -1,6 +1,7 @@
 #include<stdio.h>
 
-int main(int arc, char** argv){
-	while (1);
-	return 0;
+int main(int argc, char** argv){
+  while(1);
+  return 0;
 }
+//BRAINS AND BANDWIDTH

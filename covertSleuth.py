@@ -3,7 +3,7 @@ import os
 import stat
 import time
 
-INTERVAL = 1
+INTERVAL = 3
 
 class Filestat:
     def __init__(self, n, s):
@@ -19,6 +19,8 @@ class Filestat:
                 self.count += 1
                 if(self.count >= 3):
                     print("WARNING: ", self.name, " may be compromised");
+            else:
+                count = 0
                 
             
         else:
@@ -37,6 +39,3 @@ while True:
         if fn in filelist:
             filelist[fn].checkdiff(Filestat(fn, os.stat(fn)))
             
-    
-    
-
